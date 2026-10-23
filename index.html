@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construyendo con Amor por Ortega | Johanna Carrillo Alcaldesa</title>
+    <!-- Google Fonts: Outfit & Arimo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="top-navbar">
+        <div class="brand-wrapper">
+            <img src="assets/media/image2.png" alt="CCAO Logo" class="brand-logo-img">
+            <div class="brand-info">
+                <span class="brand-title">CCAO · CONSTRUYENDO CON AMOR POR ORTEGA</span>
+                <span class="brand-subtitle">Johanna Carrillo Monroy · Alcaldesa</span>
+            </div>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-pill-btn" onclick="toggleOverview()" title="Ver todas las diapositivas (Tecla: O)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Índice
+            </button>
+            <button class="nav-pill-btn" onclick="toggleFullscreen()" title="Pantalla completa (Tecla: F)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                    </path>
+                </svg>
+                Pantalla Completa
+            </button>
+            <div class="slide-counter-badge" id="slideCounterBadge">1 / 25</div>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="nav-progress-bar">
+        <div class="nav-progress-fill" id="navProgressFill"></div>
+    </div>
+
+    <!-- SECTION SUB-NAV TABS -->
+    <nav class="section-tabs-bar">
+        <button class="section-tab-item active" onclick="goToCategory(0)">1. Portada & Visión</button>
+        <button class="section-tab-item" onclick="goToCategory(1)">2. Radiografía Territorial</button>
+        <button class="section-tab-item" onclick="goToCategory(2)">3. Histórico Electoral</button>
+        <button class="section-tab-item" onclick="goToCategory(3)">4. Alianzas & Encuesta</button>
+        <button class="section-tab-item" onclick="goToCategory(4)">5. Diagnóstico & 7 Movimientos</button>
+        <button class="section-tab-item" onclick="goToCategory(5)">6. Estructura & Estrategia</button>
+    </nav>
+
+    <!-- MAIN SLIDE VIEWPORT -->
+    <main class="deck-main-viewport">
+
+        <!-- ==========================================
+             SLIDE 1: PORTADA
+        =========================================== -->
+        <article class="slide-stage-card theme-slide-magenta" id="slide-1">
+            <div class="slide-inner">
+                <div class="slide-cover-layout">
+                    <div class="cover-content-col">
+                        <div class="cover-logo-hero">
+                            <img src="assets/media/image4.png" alt="CCAO Logo - Construyendo con Amor por Ortega">
+                        </div>
+                        <div class="cover-badge-top">Estrategia Política de Campaña</div>
+                        <h1 class="cover-main-title">
+                            CONSTRUYENDO CON AMOR
+                            <span class="highlight">POR ORTEGA</span>
+                        </h1>
+                        <p class="cover-slogan">Campaña Electoral · Liderazgo y Transformación Social</p>
+                        <p class="cover-desc">
+                            Propuesta estratégica y diagnóstico integral para consolidar la primera alcaldía liderada
+                            por una mujer en la historia de Ortega, Tolima. Una visión con carácter, cercanía y amor por
+                            el territorio.
+                        </p>
+                        <div class="cover-action-row">
+                            <button class="btn-primary-action" onclick="nextSlide()">
+                                Comenzar Presentación
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                            <button class="btn-secondary-action" onclick="toggleOverview()">Ver Temario
+                                Completo</button>
+                        </div>
+                    </div>
+                    <div class="cover-visual-col">
+                        <div class="cover-portrait-wrapper">
+                            <img src="assets/media/image1.png" alt="Johanna Lizeth Carrillo Monroy"
+                                class="cover-portrait-img" style="border-color: rgba(255,255,255,0.7);">
+                            <div class="cover-floating-tag">
+                                <span class="role">Candidata a la Alcaldía</span>
+                                <h3 class="name">Johanna Lizeth Carrillo Monroy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 2: PERFIL DE LA CANDIDATA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-2" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 01 · Identidad & Liderazgo</span>
+                        <h2 class="slide-title">Mi Nombre es Johanna Lizeth Carrillo Monroy</h2>
+                        <p class="slide-subtitle">Hija de padres ortegunos, comunicadora, especialista y servidora con
+                            vocación comunitaria</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="bio-layout-grid">
+                    <div class="bio-card-sidebar">
+                        <img src="assets/media/image11.png" alt="Johanna Carrillo" class="bio-photo-circle">
+                        <h3 class="bio-candidate-name">Johanna Carrillo Monroy</h3>
+                        <p class="bio-candidate-roots">Hija de Omar Iván Carrillo y Gloria Mercedes Monroy</p>
+                        <div class="bio-family-badge">Madre y Esposa Ejemplar</div>
+                    </div>
+                    <div class="bio-pillars-grid">
+                        <div class="bio-item-box">
+                            <div class="bio-item-tag">Vocación Social</div>
+                            <h4 class="bio-item-title">20 Años de Trabajo Comunitario</h4>
+                            <p class="bio-item-desc">Trayectoria comunitaria en la Fundación PLAN COLOMBIA y liderazgo
+                                activo en Rotaract Armero – Ibagué, sirviendo a comunidades vulnerables.</p>
+                        </div>
+                        <div class="bio-item-box">
+                            <div class="bio-item-tag">Formación Profesional</div>
+                            <h4 class="bio-item-title">Comunicadora Social y Periodista</h4>
+                            <p class="bio-item-desc">Egresada de la Universidad Sergio Arboleda con énfasis en
+                                comunicación organizacional y gestión pública.</p>
+                        </div>
+                        <div class="bio-item-box">
+                            <div class="bio-item-tag">Experiencia en lo Público</div>
+                            <h4 class="bio-item-title">10 Años en el Servicio del Estado</h4>
+                            <p class="bio-item-desc">Desempeño en entidades estatales y Jefa de Protocolo de la
+                                Gobernación del Tolima (2021-2023), articulando con alcaldías y ministerios.</p>
+                        </div>
+                        <div class="bio-item-box">
+                            <div class="bio-item-tag">Posgrado & Medios</div>
+                            <h4 class="bio-item-title">Magíster en Gerencia Estratégica</h4>
+                            <p class="bio-item-desc">Especialista y Magíster de la Universidad de La Sabana, y 3 años de
+                                experiencia en medios de comunicación con Colmundo Radio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 3: FAMILIA Y BASE POLÍTICA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-3" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 01 · Raíces y Respaldo</span>
+                        <h2 class="slide-title">Base Política</h2>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div
+                        style="font-size: 0.85rem; font-weight: 800; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">
+                        Legado Familiar · Familia Monroy Carrillo
+                    </div>
+                    <p class="legacy-note">Honrando el legado de Jaime Monroy Carrillo (Q.E.P.D.) y consolidando una red
+                        comunitaria rural y urbana</p>
+                    <div class="family-gallery-row">
+                        <div class="family-thumb-card">
+                            <img src="assets/media/image20.png" alt="Ana Judith Monroy" class="family-thumb-img">
+                            <div class="family-thumb-name">Ana Judith Monroy</div>
+                        </div>
+                        <div class="family-thumb-card">
+                            <img src="assets/media/image16.png" alt="Esperanza Monroy" class="family-thumb-img">
+                            <div class="family-thumb-name">Esperanza Monroy</div>
+                        </div>
+                        <div class="family-thumb-card">
+                            <img src="assets/media/image22.png" alt="Linda Monroy" class="family-thumb-img">
+                            <div class="family-thumb-name">Linda Monroy</div>
+                        </div>
+                        <div class="family-thumb-card">
+                            <img src="assets/media/image26.png" alt="Ana Julia Carrillo" class="family-thumb-img">
+                            <div class="family-thumb-name">Ana Julia Carrillo</div>
+                        </div>
+                        <div class="family-thumb-card">
+                            <img src="assets/media/image12.png" alt="Diana Monroy" class="family-thumb-img">
+                            <div class="family-thumb-name">Diana Monroy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="font-size: 0.85rem; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 10px;">
+                    Base Política y Liderazgo Territorial
+                </div>
+                <div class="leaders-grid-container">
+                    <div class="leader-card-item">
+                        <img src="assets/media/image32.png" alt="Omar Iván Carrillo" class="leader-thumb-img">
+                        <div class="leader-meta">
+                            <h4 class="leader-name">Omar Iván Carrillo Ramírez</h4>
+                            <div class="leader-role">Líder Campaña Rural</div>
+                            <p class="leader-subtext">Exalcalde de Ortega (2020-2023) y exconcejal durante 16 años.</p>
+                        </div>
+                    </div>
+                    <div class="leader-card-item">
+                        <img src="assets/media/image31.png" alt="Gloria Mercedes Monroy" class="leader-thumb-img">
+                        <div class="leader-meta">
+                            <h4 class="leader-name">Gloria Mercedes Monroy Carrillo</h4>
+                            <div class="leader-role">Líder Campaña Urbana</div>
+                            <p class="leader-subtext">Concejal activa de Ortega (2024-2026) y líder del sector social.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="leader-card-item">
+                        <img src="assets/media/image30.png" alt="Mireya Argenis Tovar" class="leader-thumb-img">
+                        <div class="leader-meta">
+                            <h4 class="leader-name">Mireya Argenis Tovar Fonseca</h4>
+                            <div class="leader-role">Líder Comunal Rural</div>
+                            <p class="leader-subtext">Reconocida líder de la vereda Altozano con arraigo campesino.</p>
+                        </div>
+                    </div>
+                    <div class="leader-card-item">
+                        <img src="assets/media/image33.png" alt="Jennifer Barreto" class="leader-thumb-img">
+                        <div class="leader-meta">
+                            <h4 class="leader-name">Jennifer Barreto</h4>
+                            <div class="leader-role">Sector Cafetero & Asociaciones</div>
+                            <p class="leader-subtext">Líder de la Tienda del Café y representante de productores
+                                locales.</p>
+                        </div>
+                    </div>
+                    <div class="leader-card-item leader-duo">
+                        <img src="assets/media/image37.png" alt="Paula Rubio y Cesar Tapiero" class="leader-duo-img">
+                        <div class="leader-duo-people">
+                            <div class="leader-person">
+                                <h4 class="leader-name">Paula Rubio</h4>
+                                <div class="leader-role">Liderazgo Comunitario</div>
+                                <p class="leader-subtext">Sobrina de Rafaela Murillo con trabajo articulado en los
+                                    barrios.</p>
+                            </div>
+                            <div class="leader-person">
+                                <h4 class="leader-name">Cesar Tapiero</h4>
+                                <div class="leader-role">Líder Zona Rural</div>
+                                <p class="leader-subtext">Hijo de docente orteguna con profundo conocimiento del
+                                    territorio veredal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 4: OBJETIVOS
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-4" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 01 · Horizonte Estratégico</span>
+                        <h2 class="slide-title">Objetivos de Campaña</h2>
+                        <p class="slide-subtitle">Propósito fundamental y metas a corto y mediano plazo</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="goals-presentation-layout">
+                    <div>
+                        <div class="goal-highlight-card" style="margin-bottom: 20px;">
+                            <div class="goal-label">Objetivo General</div>
+                            <h3 class="goal-primary-text">
+                                Ser la primera mujer alcaldesa en la historia del municipio de Ortega, Tolima.
+                            </h3>
+                        </div>
+                        <div class="specific-goals-stack">
+                            <div class="specific-goal-item">
+                                <div class="specific-goal-num">Objetivo Específico 01</div>
+                                <h4 class="specific-goal-title">Alternativa Diferencial de Gobierno</h4>
+                                <p class="specific-goal-desc">Construir una propuesta de gestión pública técnica, humana
+                                    y transparente, que responda con soluciones puntuales a las demandas históricas de
+                                    Ortega.</p>
+                            </div>
+                            <div class="specific-goal-item">
+                                <div class="specific-goal-num">Objetivo Específico 02</div>
+                                <h4 class="specific-goal-title">Posicionamiento del Liderazgo Femenino</h4>
+                                <p class="specific-goal-desc">Consolidar en los próximos 12 meses el liderazgo de la
+                                    mujer como una fuerza de transformación social permanente en el municipio y en el
+                                    departamento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goal-hero-visual">
+                        <img src="assets/media/image38.png" alt="Johanna Carrillo en Territorio" class="goal-hero-img">
+                        <div class="goal-hero-caption">
+                            Johanna Carrillo Monroy · Con el corazón en el territorio
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 5: RADIOGRAFÍA TERRITORIAL (MAPA DE ORTEGA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-5" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 02 · Diagnóstico Demográfico & Geográfico</span>
+                        <h2 class="slide-title">Radiografía Territorial de Ortega, Tolima</h2>
+                        <p class="slide-subtitle">Población total, distribución por sexo y mapa oficial del territorio
+                        </p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 0.9fr 1.3fr; gap: 28px; align-items: center;">
+                    <div>
+                        <div class="kpi-stats-grid" style="grid-template-columns: 1fr; margin-bottom: 16px;">
+                            <div class="kpi-card highlight">
+                                <div class="kpi-title">Población Total del Municipio</div>
+                                <div class="kpi-value">36.604</div>
+                                <p class="kpi-subtext">Habitantes censados en Ortega, Tolima</p>
+                            </div>
+                        </div>
+                        <div class="kpi-stats-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 16px;">
+                            <div class="kpi-card">
+                                <div class="kpi-title">Mujeres</div>
+                                <div class="kpi-value" style="font-size: 2.2rem;">17.725</div>
+                                <p class="kpi-subtext">Población femenina</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Hombres</div>
+                                <div class="kpi-value" style="font-size: 2.2rem;">18.879</div>
+                                <p class="kpi-subtext">Población masculina</p>
+                            </div>
+                        </div>
+                        <div class="demographic-split-bar" style="margin-bottom: 0;">
+                            <div class="split-track split-track-big">
+                                <div class="split-segment women" style="width: 48.4%;">Mujeres · 48,4%</div>
+                                <div class="split-segment men" style="width: 51.6%;">Hombres · 51,6%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MAPA DE ORTEGA (GOOGLE MAPS) -->
+                    <div class="map-embed-card">
+                        <div class="map-embed-header">
+                            <span class="map-embed-title">🗺️ Ortega, Tolima · Google Maps</span>
+                            <div class="map-embed-actions">
+                                <button class="map-embed-btn"
+                                    onclick="openLightbox('assets/media/image39.png', 'Mapa Territorial y Veredal de Ortega, Tolima')">🔍
+                                    Mapa veredal oficial</button>
+                                <a class="map-embed-btn"
+                                    href="https://www.google.com/maps/place/Ortega,+Tolima,+Colombia" target="_blank"
+                                    rel="noopener">Abrir en Google Maps ↗</a>
+                            </div>
+                        </div>
+                        <iframe class="map-embed-frame" title="Mapa de Ortega, Tolima en Google Maps"
+                            src="https://www.google.com/maps?q=Ortega,+Tolima,+Colombia&t=h&z=11&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 6: DEMOGRAFÍA ETARIA (MAYORES 18 Y 60)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-6" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 02 · Estructura de Edad</span>
+                        <h2 class="slide-title">Demografía Territorial por Grupos de Edad</h2>
+                        <p class="slide-subtitle">Censo de mayores de edad y adultos mayores en Ortega</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="kpi-stats-grid">
+                    <div class="kpi-card highlight">
+                        <div class="kpi-title">Mayores de 18 Años (Censo Electoral Base)</div>
+                        <div class="kpi-value">25.638</div>
+                        <p class="kpi-subtext">70% de la población total municipal</p>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Mayores de 18: Mujeres</div>
+                        <div class="kpi-value">12.416</div>
+                        <p class="kpi-subtext">48,4% de los mayores de edad</p>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Mayores de 18: Hombres</div>
+                        <div class="kpi-value">13.222</div>
+                        <p class="kpi-subtext">51,6% de los mayores de edad</p>
+                    </div>
+                </div>
+                <div class="kpi-stats-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-title">Adultos Mayores (60+ Años)</div>
+                        <div class="kpi-value">7.144</div>
+                        <p class="kpi-subtext">Población prioritaria para programas de cuidado</p>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Mayores 60+: Mujeres</div>
+                        <div class="kpi-value">3.444</div>
+                        <p class="kpi-subtext">48,2% de los adultos mayores</p>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Mayores 60+: Hombres</div>
+                        <div class="kpi-value">3.700</div>
+                        <p class="kpi-subtext">51,8% de los adultos mayores</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 7: TABLA PUESTOS DE VOTACIÓN (INTERACTIVA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-7" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 02 · Censo Electoral Oficial</span>
+                        <h2 class="slide-title">Potencial Electoral por Puesto de Votación</h2>
+                        <p class="slide-subtitle">Total: 24.311 votantes · 82 mesas distribuidas en el municipio</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="table-filter-bar">
+                    <input type="text" id="stationSearchInput" class="table-search-input"
+                        placeholder="🔍 Buscar puesto o vereda...">
+                    <div class="filter-btn-group">
+                        <button class="filter-pill active" data-filter="all">Todos (22 puestos)</button>
+                        <button class="filter-pill" data-filter="urbano">Cabecera Urbana</button>
+                        <button class="filter-pill" data-filter="rural">Zona Rural / Veredas</button>
+                    </div>
+                </div>
+
+                <div class="table-container-scrollable">
+                    <table class="electoral-data-table">
+                        <thead>
+                            <tr>
+                                <th>Puesto de Votación</th>
+                                <th>Zona</th>
+                                <th style="text-align: right;">Mujeres</th>
+                                <th style="text-align: right;">Hombres</th>
+                                <th style="text-align: right;">Total Censo</th>
+                                <th style="text-align: center;">Mesas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pollingTableBody">
+                            <tr data-name="Cabecera municipal" data-zone="urbano" data-women="5486" data-men="6251"
+                                data-total="11737" data-tables="35">
+                                <td><strong>Cabecera Municipal</strong></td>
+                                <td><span class="badge-tag highlight">Urbana</span></td>
+                                <td style="text-align: right;">5.486</td>
+                                <td style="text-align: right;">6.251</td>
+                                <td style="text-align: right;"><strong>11.737</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">35</span></td>
+                            </tr>
+                            <tr data-name="El Vergel" data-zone="rural" data-women="1009" data-men="1143"
+                                data-total="2152" data-tables="7">
+                                <td>El Vergel</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">1.009</td>
+                                <td style="text-align: right;">1.143</td>
+                                <td style="text-align: right;"><strong>2.152</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">7</span></td>
+                            </tr>
+                            <tr data-name="Los Guayabos" data-zone="rural" data-women="486" data-men="646"
+                                data-total="1132" data-tables="4">
+                                <td>Los Guayabos</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">486</td>
+                                <td style="text-align: right;">646</td>
+                                <td style="text-align: right;"><strong>1.132</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">4</span></td>
+                            </tr>
+                            <tr data-name="Olaya Herrera" data-zone="rural" data-women="484" data-men="459"
+                                data-total="943" data-tables="3">
+                                <td>Olaya Herrera</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">484</td>
+                                <td style="text-align: right;">459</td>
+                                <td style="text-align: right;"><strong>943</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Paloma Peralonso" data-zone="rural" data-women="451" data-men="489"
+                                data-total="940" data-tables="3">
+                                <td>Paloma Peralonso</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">451</td>
+                                <td style="text-align: right;">489</td>
+                                <td style="text-align: right;"><strong>940</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Hato de Iglesia" data-zone="rural" data-women="417" data-men="442"
+                                data-total="859" data-tables="3">
+                                <td>Hato de Iglesia</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">417</td>
+                                <td style="text-align: right;">442</td>
+                                <td style="text-align: right;"><strong>859</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Mesa de Ortega" data-zone="rural" data-women="337" data-men="424"
+                                data-total="761" data-tables="3">
+                                <td>Mesa de Ortega</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">337</td>
+                                <td style="text-align: right;">424</td>
+                                <td style="text-align: right;"><strong>761</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Chapinero (Buenos Aires)" data-zone="rural" data-women="336" data-men="404"
+                                data-total="740" data-tables="3">
+                                <td>Chapinero (Buenos Aires)</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">336</td>
+                                <td style="text-align: right;">404</td>
+                                <td style="text-align: right;"><strong>740</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Guatavita Tua" data-zone="rural" data-women="343" data-men="386"
+                                data-total="729" data-tables="3">
+                                <td>Guatavita Tua</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">343</td>
+                                <td style="text-align: right;">386</td>
+                                <td style="text-align: right;"><strong>729</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">3</span></td>
+                            </tr>
+                            <tr data-name="Cedrales" data-zone="rural" data-women="297" data-men="386" data-total="683"
+                                data-tables="2">
+                                <td>Cedrales</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">297</td>
+                                <td style="text-align: right;">386</td>
+                                <td style="text-align: right;"><strong>683</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">2</span></td>
+                            </tr>
+                            <tr data-name="Horizonte" data-zone="rural" data-women="273" data-men="384" data-total="657"
+                                data-tables="2">
+                                <td>Horizonte</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">273</td>
+                                <td style="text-align: right;">384</td>
+                                <td style="text-align: right;"><strong>657</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">2</span></td>
+                            </tr>
+                            <tr data-name="La Sortija" data-zone="rural" data-women="255" data-men="267"
+                                data-total="522" data-tables="2">
+                                <td>La Sortija</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">255</td>
+                                <td style="text-align: right;">267</td>
+                                <td style="text-align: right;"><strong>522</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">2</span></td>
+                            </tr>
+                            <tr data-name="Corazón de Peralonzo" data-zone="rural" data-women="206" data-men="230"
+                                data-total="436" data-tables="2">
+                                <td>Corazón de Peralonzo</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">206</td>
+                                <td style="text-align: right;">230</td>
+                                <td style="text-align: right;"><strong>436</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">2</span></td>
+                            </tr>
+                            <tr data-name="Guaipa" data-zone="rural" data-women="193" data-men="230" data-total="423"
+                                data-tables="2">
+                                <td>Guaipa</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">193</td>
+                                <td style="text-align: right;">230</td>
+                                <td style="text-align: right;"><strong>423</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">2</span></td>
+                            </tr>
+                            <tr data-name="El Maco" data-zone="rural" data-women="134" data-men="192" data-total="326"
+                                data-tables="1">
+                                <td>El Maco</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">134</td>
+                                <td style="text-align: right;">192</td>
+                                <td style="text-align: right;"><strong>326</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="La Colorada" data-zone="rural" data-women="128" data-men="197"
+                                data-total="325" data-tables="1">
+                                <td>La Colorada</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">128</td>
+                                <td style="text-align: right;">197</td>
+                                <td style="text-align: right;"><strong>325</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="Canalí (Chicalá)" data-zone="rural" data-women="131" data-men="173"
+                                data-total="304" data-tables="1">
+                                <td>Canalí (Chicalá)</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">131</td>
+                                <td style="text-align: right;">173</td>
+                                <td style="text-align: right;"><strong>304</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="Los Andes" data-zone="rural" data-women="107" data-men="113" data-total="220"
+                                data-tables="1">
+                                <td>Los Andes</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">107</td>
+                                <td style="text-align: right;">113</td>
+                                <td style="text-align: right;"><strong>220</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="Santuario" data-zone="rural" data-women="101" data-men="111" data-total="212"
+                                data-tables="1">
+                                <td>Santuario</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">101</td>
+                                <td style="text-align: right;">111</td>
+                                <td style="text-align: right;"><strong>212</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="La Balsa" data-zone="rural" data-women="71" data-men="127" data-total="198"
+                                data-tables="1">
+                                <td>La Balsa</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">71</td>
+                                <td style="text-align: right;">127</td>
+                                <td style="text-align: right;"><strong>198</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="San Nicolás" data-zone="rural" data-women="5" data-men="4" data-total="9"
+                                data-tables="1">
+                                <td>San Nicolás</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">5</td>
+                                <td style="text-align: right;">4</td>
+                                <td style="text-align: right;"><strong>9</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                            <tr data-name="Mesa de Cucuana" data-zone="rural" data-women="1" data-men="2" data-total="3"
+                                data-tables="1">
+                                <td>Mesa de Cucuana</td>
+                                <td><span class="badge-tag">Rural</span></td>
+                                <td style="text-align: right;">1</td>
+                                <td style="text-align: right;">2</td>
+                                <td style="text-align: right;"><strong>3</strong></td>
+                                <td style="text-align: center;"><span class="badge-tag">1</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">TOTAL FILTRADO / CONSOLIDADO</td>
+                                <td id="footTotalWomen" style="text-align: right;">11.251</td>
+                                <td id="footTotalMen" style="text-align: right;">13.060</td>
+                                <td id="footTotalVotes" style="text-align: right;">24.311</td>
+                                <td id="footTotalTables" style="text-align: center;">82</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 8: ELECCIONES 2019 (ALCALDÍA Y GOBERNACIÓN)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-8" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Histórico Electoral</span>
+                        <h2 class="slide-title">Elecciones 2019: Alcaldía y Gobernación</h2>
+                        <p class="slide-subtitle">Total sufragantes reportados: 14.163 · Participación electoral: 60,12%
+                        </p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Resultados Alcaldía de Ortega 2019</div>
+                <div class="candidates-grid" style="margin-bottom: 24px;">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image32.png" alt="Omar Iván Carrillo" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Omar Iván Carrillo Ramírez</div>
+                                <div class="candidate-party-txt">Partido de la U · Ganador Alcalde</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">7.502 votos</span>
+                            <span class="vote-percentage">54,43%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image40.png" alt="Diego Arbey Matiz" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Diego Arbey Matiz Garzón</div>
+                                <div class="candidate-party-txt">Partido Conservador Colombiano</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">5.409 votos</span>
+                            <span class="vote-percentage">39,24%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image41.png" alt="Carlos Collazos" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Carlos Humberto Collazos</div>
+                                <div class="candidate-party-txt">Partido Liberal Colombiano</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">642 votos</span>
+                            <span class="vote-percentage">4,65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Gobernación del Tolima (Votos en Ortega)</div>
+                <div class="candidates-grid">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image42.png" alt="Ricardo Orozco" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">José Ricardo Orozco Valero</div>
+                                <div class="candidate-party-txt">Coalición Conservador · U · ASI</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">7.581 votos</span>
+                            <span class="vote-percentage">65,32%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image43.png" alt="Rosmery Martínez" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Rosmery Martínez Rosales</div>
+                                <div class="candidate-party-txt">Coalición Cambiando el Tolima</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">2.880 votos</span>
+                            <span class="vote-percentage">24,81%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 9: ELECCIONES 2019 (CONCEJO Y ASAMBLEA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-9" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Corporaciones 2019</span>
+                        <h2 class="slide-title">Elecciones 2019: Concejo Municipal y Asamblea</h2>
+                        <p class="slide-subtitle">Comportamiento electoral y fuerzas de coalición en Ortega</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Concejo Municipal de Ortega 2019 (Coalición U / MIRA)</div>
+                <div class="candidates-grid" style="margin-bottom: 24px;">
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image44.png" alt="Luis Alfredo Luna" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Luis Alfredo Luna Mendoza</div>
+                                <div class="candidate-party-txt">Concejo 2019 · U / MIRA</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">420 votos</span>
+                            <span class="vote-percentage">3,31%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image44.png" alt="Alexander Dimate" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Alexander Dimate Sandino</div>
+                                <div class="candidate-party-txt">Concejo 2019 · U / MIRA</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">328 votos</span>
+                            <span class="vote-percentage">2,58%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image44.png" alt="Ana Clara Chaguala" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Ana Clara Chaguala Peña</div>
+                                <div class="candidate-party-txt">Concejo 2019 · U / MIRA</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">313 votos</span>
+                            <span class="vote-percentage">2,47%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image44.png" alt="Freddy Lozano" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Freddy Hernán Lozano Lozano</div>
+                                <div class="candidate-party-txt">Concejo 2019 · U / MIRA</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">225 votos</span>
+                            <span class="vote-percentage">1,77%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Asamblea Departamental 2019 (Votación en Ortega)</div>
+                <div class="candidates-grid">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image45.png" alt="José Alejandro Martínez" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">José Alejandro Martínez</div>
+                                <div class="candidate-party-txt">Asamblea 2019 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">871 votos</span>
+                            <span class="vote-percentage">8,41%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image46.png" alt="Carlos Sánchez Serrano" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Carlos Sánchez Serrano</div>
+                                <div class="candidate-party-txt">Asamblea 2019</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">635 votos</span>
+                            <span class="vote-percentage">6,13%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image47.png" alt="Partido Conservador" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Partido Conservador</div>
+                                <div class="candidate-party-txt">Solo por la lista</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">583 votos</span>
+                            <span class="vote-percentage">5,63%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image48.png" alt="Gerardo Yepes Caro" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Gerardo Yepes Caro</div>
+                                <div class="candidate-party-txt">Asamblea 2019</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">410 votos</span>
+                            <span class="vote-percentage">3,96%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 10: ELECCIONES 2022 (CÁMARA Y SENADO)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-10" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Elecciones Nacionales</span>
+                        <h2 class="slide-title">Elecciones 2022: Cámara y Senado en Ortega</h2>
+                        <p class="slide-subtitle">Fuerza y caudal de los liderazgos conservadores y aliados en el
+                            municipio</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Cámara de Representantes 2022</div>
+                <div class="candidates-grid" style="margin-bottom: 24px;">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image45.png" alt="Alejandro Martínez" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">José Alejandro Martínez Sánchez</div>
+                                <div class="candidate-party-txt">Cámara 2022 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">3.317 votos</span>
+                            <span class="vote-percentage">38,84%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image50.png" alt="Delcy Isaza" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Delcy Esperanza Isaza</div>
+                                <div class="candidate-party-txt">Cámara 2022 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.628 votos</span>
+                            <span class="vote-percentage">19,06%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image51.png" alt="Martha Eliana Lagos" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Martha Eliana Lagos Cardona</div>
+                                <div class="candidate-party-txt">Cámara 2022 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">91 votos</span>
+                            <span class="vote-percentage">1,06%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Senado de la República 2022</div>
+                <div class="candidates-grid">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image49.png" alt="Óscar Barreto" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Óscar Barreto Quiroga</div>
+                                <div class="candidate-party-txt">Senado 2022 · Partido Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">3.250 votos</span>
+                            <span class="vote-percentage">39,62%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image47.png" alt="Partido Conservador" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Partido Conservador Colombiano</div>
+                                <div class="candidate-party-txt">Solo por la lista</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">627 votos</span>
+                            <span class="vote-percentage">7,64%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image46.png" alt="Esperanza Andrade" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Esperanza Andrade Serrano</div>
+                                <div class="candidate-party-txt">Senado 2022</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">545 votos</span>
+                            <span class="vote-percentage">6,64%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 11: ELECCIONES 2023 (ALCALDÍA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-11" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Última Elección Local</span>
+                        <h2 class="slide-title">Elecciones 2023: Alcaldía de Ortega</h2>
+                        <p class="slide-subtitle">Total votación reportada para Alcaldía: 14.080 votos</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="candidates-grid" style="margin-top: 20px;">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image40.png" alt="Diego Matiz" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Diego Arbey Matiz Garzón</div>
+                                <div class="candidate-party-txt">Alcalde Electo 2023</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">8.201 votos</span>
+                            <span class="vote-percentage">60,31%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image52.png" alt="Jorge Vaquiro" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Jorge Alberto Vaquiro Capera</div>
+                                <div class="candidate-party-txt">Candidato Alcaldía 2023</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">3.109 votos</span>
+                            <span class="vote-percentage">22,86%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image53.png" alt="Jhon James Ducuara" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Jhon James Ducuara Gómez</div>
+                                <div class="candidate-party-txt">Candidato Alcaldía 2023</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">781 votos</span>
+                            <span class="vote-percentage">5,74%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 12: ELECCIONES 2023 (CONCEJO Y ASAMBLEA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-12" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Composición 2023</span>
+                        <h2 class="slide-title">Elecciones 2023: Concejo Municipal y Asamblea</h2>
+                        <p class="slide-subtitle">Distribución partidista y principales votaciones en Ortega</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="alliances-grid-layout" style="margin-bottom: 20px;">
+                    <div class="alliance-box">
+                        <h4 class="alliance-box-title">Concejo de Ortega · Votación por Partidos</h4>
+                        <div class="badge-tag-cloud">
+                            <span class="badge-tag highlight">Partido Conservador: 4.441 votos (34,42%)</span>
+                            <span class="badge-tag">MAIS: 1.472 votos</span>
+                            <span class="badge-tag">ASI: 1.156 votos</span>
+                        </div>
+                    </div>
+                    <div class="alliance-box">
+                        <h4 class="alliance-box-title">Asamblea Departamental · Votación en Ortega</h4>
+                        <div class="badge-tag-cloud">
+                            <span class="badge-tag highlight">Partido Conservador: 5.188 votos (50,69%)</span>
+                            <span class="badge-tag">Caudal mayoritario departamental</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Líderes con Mayor Votación (Concejo y Asamblea 2023)</div>
+                <div class="candidates-grid">
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image46.png" alt="Víctor Leal" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Víctor Leal Tapiero</div>
+                                <div class="candidate-party-txt">Concejo · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">514 votos</span>
+                            <span class="vote-percentage">3,98%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image46.png" alt="Diego Correcha" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Diego Armando Correcha</div>
+                                <div class="candidate-party-txt">Concejo 2023</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">485 votos</span>
+                            <span class="vote-percentage">3,75%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image46.png" alt="Alexander Capera" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Alexander Capera Ducuara</div>
+                                <div class="candidate-party-txt">Concejo 2023</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">459 votos</span>
+                            <span class="vote-percentage">3,55%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image55.png" alt="Abel Otálora" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Abel Otálora Arias</div>
+                                <div class="candidate-party-txt">Asamblea · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.007 votos</span>
+                            <span class="vote-percentage">9,84%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image57.png" alt="Milton Reyes" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Milton Fernando Reyes</div>
+                                <div class="candidate-party-txt">Asamblea · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">799 votos</span>
+                            <span class="vote-percentage">7,80%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image56.png" alt="Giovanny Molina" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Giovanny Eduardo Molina</div>
+                                <div class="candidate-party-txt">Asamblea · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">755 votos</span>
+                            <span class="vote-percentage">7,37%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image58.png" alt="Brayam Escandón" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Brayam Alfonso Escandón</div>
+                                <div class="candidate-party-txt">Asamblea · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">380 votos</span>
+                            <span class="vote-percentage">3,71%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image59.png" alt="Miguel Ángel Ducuara" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Miguel Ángel Ducuara</div>
+                                <div class="candidate-party-txt">Concejo 2023 · MAIS</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">306 votos</span>
+                            <span class="vote-percentage">2,37%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image54.png" alt="Gloria Mercedes Monroy" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Gloria Mercedes Monroy</div>
+                                <div class="candidate-party-txt">Concejo 2023 · ASI</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">325 votos</span>
+                            <span class="vote-percentage">2,51%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 13: ELECCIONES 2026 (CÁMARA Y SENADO)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-13" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 03 · Proyección Legislativa</span>
+                        <h2 class="slide-title">Elecciones 2026: Cámara y Senado en Ortega</h2>
+                        <p class="slide-subtitle">Comportamiento electoral proyectado y fuerzas con presencia en el
+                            municipio</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Cámara de Representantes 2026</div>
+                <div class="candidates-grid" style="margin-bottom: 24px;">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image60.png" alt="Guillermo Alvira" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Guillermo Ignacio Alvira</div>
+                                <div class="candidate-party-txt">Cámara 2026 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">3.947 votos</span>
+                            <span class="vote-percentage">39,25%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image61.png" alt="Linda Perdomo" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Linda Perdomo Ramírez</div>
+                                <div class="candidate-party-txt">Cámara 2026 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.046 votos</span>
+                            <span class="vote-percentage">10,40%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image50.png" alt="Delcy Isaza" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Delcy Esperanza Isaza</div>
+                                <div class="candidate-party-txt">Cámara 2026 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">842 votos</span>
+                            <span class="vote-percentage">8,37%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image45.png" alt="Alejandro Martínez" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Alejandro Martínez</div>
+                                <div class="candidate-party-txt">Cámara 2026 · Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">389 votos</span>
+                            <span class="vote-percentage">3,86%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="election-header-badge">Senado de la República 2026</div>
+                <div class="candidates-grid">
+                    <div class="candidate-card winner">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image62.png" alt="Santiago Barreto" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Santiago Barreto Triana</div>
+                                <div class="candidate-party-txt">Senado 2026 · Partido Conservador</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">3.031 votos</span>
+                            <span class="vote-percentage">29,61%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image63.png" alt="Miguel Barreto" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Miguel Barreto Castillo</div>
+                                <div class="candidate-party-txt">Senado 2026</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.277 votos</span>
+                            <span class="vote-percentage">12,47%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image64.png" alt="Pacto Histórico" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Pacto Histórico</div>
+                                <div class="candidate-party-txt">Lista Nacional</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.216 votos</span>
+                            <span class="vote-percentage">11,88%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image65.png" alt="Centro Democrático" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Centro Democrático</div>
+                                <div class="candidate-party-txt">Solo por la lista</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">1.030 votos</span>
+                            <span class="vote-percentage">10,06%</span>
+                        </div>
+                    </div>
+                    <div class="candidate-card">
+                        <div class="candidate-header-row">
+                            <img src="assets/media/image66.png" alt="Partido Conservador" class="candidate-photo">
+                            <div class="candidate-names">
+                                <div class="candidate-name-txt">Partido Conservador</div>
+                                <div class="candidate-party-txt">Solo por la lista</div>
+                            </div>
+                        </div>
+                        <div class="candidate-stats-row">
+                            <span class="vote-number">582 votos</span>
+                            <span class="vote-percentage">5,70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 14: ALIANZAS Y ORGANIZACIÓN
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-14" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 04 · Estructura Política</span>
+                        <h2 class="slide-title">Aliados, Organización y Tareas Pendientes</h2>
+                        <p class="slide-subtitle">Mapa de fuerzas aliadas, partidos y blindaje electoral necesario</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="alliances-grid-layout">
+                    <div class="alliance-box">
+                        <h4 class="alliance-box-title">Aliados Estratégicos</h4>
+                        <div class="badge-tag-cloud">
+                            <span class="badge-tag highlight">Omar Carrillo</span>
+                            <span class="badge-tag highlight">Gloria Monroy</span>
+                            <span class="badge-tag">Paulo Morales</span>
+                            <span class="badge-tag">Jorge Vaquiro</span>
+                            <span class="badge-tag">Gustavo Adolfo Collazos</span>
+                        </div>
+                        <h4 class="alliance-box-title" style="margin-top: 20px;">Organización & Equipo Departamental
+                        </h4>
+                        <div class="badge-tag-cloud">
+                            <span class="badge-tag">Delcy Isaza</span>
+                            <span class="badge-tag">Alejandro Martínez</span>
+                            <span class="badge-tag">Santiago Barreto</span>
+                            <span class="badge-tag">Brayam Escandón</span>
+                            <span class="badge-tag">Carolina Mora</span>
+                        </div>
+                    </div>
+
+                    <div class="alliance-box">
+                        <h4 class="alliance-box-title">Partidos y Posibles Alianzas</h4>
+                        <div class="badge-tag-cloud" style="margin-bottom: 16px;">
+                            <span class="badge-tag highlight">Partido Conservador</span>
+                            <span class="badge-tag">Centro Democrático</span>
+                            <span class="badge-tag">MIRA</span>
+                            <span class="badge-tag">ASI · ADA · AICO</span>
+                        </div>
+
+                        <h4 class="alliance-box-title">¿Qué es lo que nos falta?</h4>
+                        <ul class="checklist-items">
+                            <li><span class="check-bullet">✔</span> Mayor respaldo público del jefe OB.</li>
+                            <li><span class="check-bullet">✔</span> Entregables que ofrezcan soluciones puntuales a las
+                                comunidades.</li>
+                            <li><span class="check-bullet">✔</span> <strong>Blindaje electoral:</strong> Solicitud de
+                                cambio de registrador.</li>
+                            <li><span class="check-bullet">✔</span> Solicitar alcalde ad-hoc encargado durante la
+                                jornada electoral.</li>
+                            <li><span class="check-bullet">✔</span> Misión especial de vigilancia con la MOE (Misión de
+                                Observación Electoral).</li>
+                            <li><span class="check-bullet">✔</span> Mayor cantidad y capacitación de testigos
+                                electorales en cada una de las 82 mesas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 15: METODOLOGÍA ENCUESTA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-15" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 04 · Investigación de Opinión</span>
+                        <h2 class="slide-title">¿Cómo se Hizo la Encuesta de Percepción?</h2>
+                        <p class="slide-subtitle">Ficha técnica y flujo entre mención de problemas y prioridad #1</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <!-- HUD Circular Gauges (Ortega en voz propia) -->
+                <div class="hud-gauges-grid">
+                    <div class="hud-gauge-card">
+                        <div class="hud-gauge-ring-box">
+                            <svg class="hud-gauge-svg" viewBox="0 0 100 100">
+                                <circle class="hud-gauge-bg" cx="50" cy="50" r="40"></circle>
+                                <circle class="hud-gauge-bar" cx="50" cy="50" r="40" stroke="url(#cyanGlow)"
+                                    stroke-dasharray="251.2" stroke-dashoffset="130.6"></circle>
+                                <defs>
+                                    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#9d4edd" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="hud-gauge-center">
+                                <span class="hud-gauge-val">48%</span>
+                                <span class="hud-gauge-unit">Menciones</span>
+                            </div>
+                        </div>
+                        <div class="hud-gauge-title">Empleo · Problema #1</div>
+                        <div class="hud-gauge-desc">El más nombrado de la agenda. Le siguen seguridad (34), salud (33) y
+                            campo (33).</div>
+                    </div>
+
+                    <div class="hud-gauge-card">
+                        <div class="hud-gauge-ring-box">
+                            <svg class="hud-gauge-svg" viewBox="0 0 100 100">
+                                <circle class="hud-gauge-bg" cx="50" cy="50" r="40"></circle>
+                                <circle class="hud-gauge-bar" cx="50" cy="50" r="40" stroke="url(#magentaGlow)"
+                                    stroke-dasharray="251.2" stroke-dashoffset="125.6"></circle>
+                                <defs>
+                                    <linearGradient id="magentaGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff2a85" />
+                                        <stop offset="100%" stop-color="#ff70b8" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="hud-gauge-center">
+                                <span class="hud-gauge-val">50%</span>
+                                <span class="hud-gauge-unit">Conversión #1</span>
+                            </div>
+                        </div>
+                        <div class="hud-gauge-title">Agua · Urgencia Vital</div>
+                        <div class="hud-gauge-desc">La tasa de conversión más alta: la mitad de quienes la nombran la
+                            hacen prioridad absoluta.</div>
+                    </div>
+
+                    <div class="hud-gauge-card">
+                        <div class="hud-gauge-ring-box">
+                            <svg class="hud-gauge-svg" viewBox="0 0 100 100">
+                                <circle class="hud-gauge-bg" cx="50" cy="50" r="40"></circle>
+                                <circle class="hud-gauge-bar" cx="50" cy="50" r="40" stroke="url(#purpleCyan)"
+                                    stroke-dasharray="251.2" stroke-dashoffset="30.1"></circle>
+                                <defs>
+                                    <linearGradient id="purpleCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#9d4edd" />
+                                        <stop offset="100%" stop-color="#00f0ff" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="hud-gauge-center">
+                                <span class="hud-gauge-val">8.8</span>
+                                <span class="hud-gauge-unit">Sobre 10</span>
+                            </div>
+                        </div>
+                        <div class="hud-gauge-title">Confianza en Johanna</div>
+                        <div class="hud-gauge-desc">69 promotores, 21 pasivos y 10 detractores. La mediana es 10 sobre
+                            10.</div>
+                    </div>
+
+                    <div class="hud-gauge-card">
+                        <div class="hud-gauge-ring-box">
+                            <svg class="hud-gauge-svg" viewBox="0 0 100 100">
+                                <circle class="hud-gauge-bg" cx="50" cy="50" r="40"></circle>
+                                <circle class="hud-gauge-bar" cx="50" cy="50" r="40" stroke="url(#goldPink)"
+                                    stroke-dasharray="251.2" stroke-dashoffset="80.4"></circle>
+                                <defs>
+                                    <linearGradient id="goldPink" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ff2a85" />
+                                        <stop offset="100%" stop-color="#00f0ff" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="hud-gauge-center">
+                                <span class="hud-gauge-val">68%</span>
+                                <span class="hud-gauge-unit">Territorio</span>
+                            </div>
+                        </div>
+                        <div class="hud-gauge-title">Presencia Requerida</div>
+                        <div class="hud-gauge-desc">2 de cada 3 piden lo mismo: visitar, recorrer, estar y aprenderse
+                            los nombres.</div>
+                    </div>
+                </div>
+
+                <div class="diagram-stage-container">
+                    <img src="assets/media/image67.png" alt="Flujo entre mención y prioridad"
+                        class="diagram-image-preview"
+                        onclick="openLightbox('assets/media/image67.png', 'Flujo entre Mención y Prioridad (Sankey)')">
+                    <div class="diagram-zoom-hint">🔍 Haz clic en la gráfica para ampliar el diagrama de flujo
+                        metodológico (Sankey) en alta resolución</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 16: MATRIZ SALIENCIA - PRIORIDAD
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-16" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 04 · Radiografía Ciudadana</span>
+                        <h2 class="slide-title">Matriz de Saliencia vs. Prioridad #1</h2>
+                        <p class="slide-subtitle">Comparativo cuantitativo: Mención espontánea (Saliencia) vs Elección
+                            como Prioridad Absoluta de Gobierno</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <!-- Futuristic Equalizer Chart -->
+                <div class="cyber-equalizer-container">
+                    <div class="cyber-equalizer-header">
+                        <div
+                            style="font-weight: 800; font-size: 0.95rem; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.5px;">
+                            📊 Jerarquía de Problemáticas de Ortega (N = 100 respuestas)
+                        </div>
+                        <div class="cyber-chart-legend">
+                            <span class="legend-item"><span class="legend-dot saliencia"></span> Saliencia (Mención Top
+                                3)</span>
+                            <span class="legend-item"><span class="legend-dot prioridad"></span> Prioridad #1
+                                Vital</span>
+                        </div>
+                    </div>
+
+                    <div class="cyber-bars-stack">
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Empleo y Oportunidades</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 48%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 15%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">48 menc.</span>
+                                <span class="val-magenta">15 prio.</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Seguridad y Orden</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 34%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 8%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">34 menc.</span>
+                                <span class="val-magenta">8 prio.</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Salud y Puestos de Atención</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 33%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 7%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">33 menc.</span>
+                                <span class="val-magenta">7 prio.</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Campo y Desarrollo Rural</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 33%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 8%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">33 menc.</span>
+                                <span class="val-magenta">8 prio.</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Agua Potable y Saneamiento</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 24%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 12%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">24 menc.</span>
+                                <span class="val-magenta" style="font-weight: 900;">12 (50%!)</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-bar-item">
+                            <span class="cyber-bar-name">Jóvenes y Formación</span>
+                            <div class="cyber-bar-dual-tracks">
+                                <div class="dual-track">
+                                    <div class="dual-fill saliencia" style="width: 28%;"></div>
+                                </div>
+                                <div class="dual-track">
+                                    <div class="dual-fill prioridad" style="width: 5%;"></div>
+                                </div>
+                            </div>
+                            <div class="cyber-bar-values">
+                                <span class="val-cyan">28 menc.</span>
+                                <span class="val-magenta">5 prio.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Strategic Cyber Insights from PDF -->
+                <div class="cyber-insights-grid">
+                    <div class="cyber-insight-card">
+                        <div class="cyber-insight-tag">Descubrimiento Clave</div>
+                        <div class="cyber-insight-title">Alumbrado en Barrios (14 Menciones)</div>
+                        <div class="cyber-insight-desc">No figuraba en la lista cerrada municipal, pero es el dolor #1
+                            en la cuadra comunitaria urbana.</div>
+                    </div>
+
+                    <div class="cyber-insight-card">
+                        <div class="cyber-insight-tag">Oportunidad de Campaña</div>
+                        <div class="cyber-insight-title">La Brecha de Cercanía (60 vs 8)</div>
+                        <div class="cyber-insight-desc">60 de 100 piden cercanía en el mandatario; solo 8 la perciben
+                            hoy en Johanna. Cada visita convierte.</div>
+                    </div>
+
+                    <div class="cyber-insight-card">
+                        <div class="cyber-insight-tag">Desmitificación</div>
+                        <div class="cyber-insight-title">10 de 10 Detractores Sin Contacto</div>
+                        <div class="cyber-insight-desc">Los detractores no son opositores ideológicos: no conocen
+                            ninguna propuesta. Es déficit de cobertura, no rechazo.</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 14px; text-align: center;">
+                    <button class="btn-secondary-action"
+                        onclick="openLightbox('assets/media/image69.png', 'Matriz de Prioridad #1 Ciudadana')"
+                        style="font-size: 0.85rem; padding: 8px 18px;">
+                        🔍 Ver Diagramas Originales en Super Zoom
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 17: FORTALEZAS Y ASPECTOS POR MEJORAR
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-17" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 04 · Percepción Ciudadana</span>
+                        <h2 class="slide-title">Fortalezas y Aspectos por Mejorar Identificados</h2>
+                        <p class="slide-subtitle">Resultados directos de la encuesta de percepción sobre la candidata
+                        </p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="perception-compare-grid">
+                    <div class="perception-col strengths">
+                        <div class="perception-col-title">
+                            <span>FORTALEZAS ATRIBUIDAS</span>
+                            <span class="badge-tag highlight">Reconocimiento</span>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Liderazgo</span><span>46 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 92%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Honestidad</span><span>35 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Capacidad de Gestión</span><span>28 menciones</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 56%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Sensibilidad Social</span><span>25 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Preparación Académica</span><span>10 menciones</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Conseguir Recursos</span><span>9 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Experiencia</span><span>4 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 8%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perception-col improvements">
+                        <div class="perception-col-title">
+                            <span>ASPECTOS POR MEJORAR</span>
+                            <span class="badge-tag">Oportunidad</span>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Poca Visibilidad</span><span>20 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Conocimiento del Territorio</span><span>15
+                                    menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Falta de Experiencia</span><span>12 menciones</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 24%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Falta de Cercanía</span><span>11 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 22%;"></div>
+                            </div>
+                        </div>
+                        <div class="perception-bar-row">
+                            <div class="perception-meta"><span>Imagen Política</span><span>9 menciones</span></div>
+                            <div class="bar-track">
+                                <div class="bar-fill" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                        <div class="insight-callout">
+                            ✨ Dato clave: <strong>43 personas no señalaron debilidades</strong>. La duda principal es
+                            por desconocimiento, no por rechazo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 18: MAPA DE MARCA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-18" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 04 · Posicionamiento</span>
+                        <h2 class="slide-title">Mapa de Marca de Johanna Carrillo</h2>
+                        <p class="slide-subtitle">Arquitectura de valores, atributos de liderazgo y narrativa de campaña
+                        </p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="diagram-stage-container">
+                    <img src="assets/media/image71.png" alt="Mapa de Marca Johanna" class="diagram-image-preview"
+                        onclick="openLightbox('assets/media/image71.png', 'Mapa de Marca de Johanna')">
+                    <div class="diagram-zoom-hint">🔍 Haz clic en la gráfica para ampliar el mapa de marca en alta
+                        resolución</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 19: HALLAZGOS PARA COMPRENDER A ORTEGA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-19" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 05 · Diagnóstico Estratégico</span>
+                        <h2 class="slide-title">Hallazgos Clave para Comprender a Ortega</h2>
+                        <p class="slide-subtitle">Diferencias estructurales entre la zona urbana y la zona rural</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="alliances-grid-layout" style="margin-bottom: 24px;">
+                    <div class="alliance-box">
+                        <div class="badge-tag highlight" style="margin-bottom: 10px;">Zona Urbana</div>
+                        <h3 style="font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 8px;">Seguridad y
+                            Alumbrado Público</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">En el casco urbano,
+                            la preocupación ciudadana se concentra en la seguridad de los barrios y la deficiencia en el
+                            servicio de alumbrado público, que incide directamente en la calidad de vida.</p>
+                    </div>
+                    <div class="alliance-box">
+                        <div class="badge-tag highlight" style="margin-bottom: 10px;">Zona Rural</div>
+                        <h3 style="font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 8px;">Agua, Vías y
+                            Actividad Campesina</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">En las veredas y
+                            centros poblados, la prioridad absoluta es el acceso al agua potable, el mantenimiento de
+                            vías terciarias para sacar las cosechas y el respaldo al campesino.</p>
+                    </div>
+                </div>
+
+                <div class="alliance-box" style="border-left: 5px solid var(--accent);">
+                    <h4 class="alliance-box-title">Temas Urgentes Destacados por el Estudio</h4>
+                    <div class="badge-tag-cloud" style="margin-top: 10px;">
+                        <span class="badge-tag highlight" style="font-size: 1rem; padding: 8px 16px;">1. Agua y
+                            Saneamiento Básico</span>
+                        <span class="badge-tag highlight" style="font-size: 1rem; padding: 8px 16px;">2. Campo y
+                            Productividad Rural</span>
+                        <span class="badge-tag highlight" style="font-size: 1rem; padding: 8px 16px;">3. Vías
+                            Terciarias</span>
+                        <span class="badge-tag" style="font-size: 1rem; padding: 8px 16px;">Tema Emergente: Alumbrado
+                            Público (14 menciones)</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 20: CONCLUSIONES Y SIETE MOVIMIENTOS
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-20" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 05 · Táctica Electoral</span>
+                        <h2 class="slide-title">Conclusiones & Siete Movimientos Estratégicos</h2>
+                        <p class="slide-subtitle">Acciones operativas concretas que se derivan de la evidencia y los
+                            datos</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="movements-grid">
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">1</div>
+                        <div class="movement-text"><strong>Un calendario de territorio con nombres:</strong> Presencia
+                            permanente en veredas clave con fechas y líderes asignados.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">2</div>
+                        <div class="movement-text"><strong>Dos propuestas con nombre propio:</strong> Además de la Casa
+                            de la Mujer, proyectos bandera de alto impacto veredal.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">3</div>
+                        <div class="movement-text"><strong>Un compromiso público con Olaya Herrera:</strong>
+                            Priorización estratégica de este corregimiento y centro poblado.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">4</div>
+                        <div class="movement-text"><strong>Poner el alumbrado en el discurso urbano:</strong> Responder
+                            al tema emergente que más reclama la ciudadanía de la cabecera.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">5</div>
+                        <div class="movement-text"><strong>Hablar del campo y del empleo como una sola cosa:</strong>
+                            Articular tecnificación agrícola con ingresos y oportunidades para los jóvenes.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">6</div>
+                        <div class="movement-text"><strong>Regla de campaña sin confrontación:</strong> Campaña limpia y
+                            una política de alianzas transparente y explicable ante el elector.</div>
+                    </div>
+                    <div class="movement-item-card">
+                        <div class="movement-number-bubble">7</div>
+                        <div class="movement-text"><strong>Prometer poco y en formato verificable:</strong> Generar
+                            confianza con compromisos medibles y cumplibles en los primeros 100 días.</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 21: ORTEGA RURAL Y URBANA (PROPUESTA)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-21" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 05 · Visión de Municipio</span>
+                        <h2 class="slide-title">Ortega Rural y Urbana: Lo Que los Ortegunos Quieren</h2>
+                        <p class="slide-subtitle">Dos pilares esenciales para cerrar brechas y generar desarrollo
+                            integral</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="alliances-grid-layout">
+                    <div class="alliance-box" style="border-top: 5px solid var(--accent);">
+                        <h3 style="color: var(--accent); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">
+                            ORTEGA DIGNA</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Superar las
+                            necesidades básicas insatisfechas que aquejan a las familias ortegunas:</p>
+                        <ul class="checklist-items">
+                            <li><span class="check-bullet">💧</span> <strong>AGUA POTABLE:</strong> Saneamiento básico y
+                                cobertura continua en veredas y cabecera.</li>
+                            <li><span class="check-bullet">🚜</span> <strong>VÍAS CONECTADAS:</strong> Maquinaria
+                                permanente y mantenimiento de corredores productivos.</li>
+                            <li><span class="check-bullet">💡</span> <strong>ALUMBRADO PÚBLICO:</strong> Iluminación LED
+                                y modernización en todos los barrios.</li>
+                            <li><span class="check-bullet">🌳</span> <strong>RECUPERACIÓN ESPACIO PÚBLICO:</strong>
+                                Parques, zonas deportivas y convivencia.</li>
+                            <li><span class="check-bullet">🤝</span> <strong>DIGNIDAD:</strong> Trato justo y
+                                prioritario para el campesino y el habitante urbano.</li>
+                        </ul>
+                    </div>
+
+                    <div class="alliance-box" style="border-top: 5px solid var(--primary);">
+                        <h3 style="color: var(--primary); font-size: 1.3rem; margin-bottom: 12px; font-weight: 800;">
+                            ORTEGA PRODUCE</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Generación de
+                            ingresos, oportunidades y fortalecimiento económico:</p>
+                        <ul class="checklist-items">
+                            <li><span class="check-bullet">💼</span> <strong>EMPLEO Y EMPRENDIMIENTO:</strong> Fomento
+                                al crédito y microempresas locales.</li>
+                            <li><span class="check-bullet">🛡️</span> <strong>SEGURIDAD INTEGRAL:</strong> Presencia
+                                institucional y prevención del delito.</li>
+                            <li><span class="check-bullet">🏥</span> <strong>SALUD OPORTUNA:</strong> Puestos de salud
+                                rurales dotados y brigadas periódicas.</li>
+                            <li><span class="check-bullet">🎓</span> <strong>EDUCACIÓN DE CALIDAD:</strong> Alianzas
+                                universitarias y técnicas para la juventud.</li>
+                            <li><span class="check-bullet">🌿</span> <strong>TURISMO Y CONECTIVIDAD:</strong> Promoción
+                                ecoturística y acceso a internet rural.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 22: POSIBLES CANDIDATOS
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-22" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 06 · Análisis Competitivo</span>
+                        <h2 class="slide-title">Escenario Electoral & Posibles Candidatos</h2>
+                        <p class="slide-subtitle">Mapeo del tablero político y de fuerzas competidoras en Ortega</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="diagram-stage-container">
+                    <img src="assets/media/image72.png" alt="Posibles Candidatos" class="diagram-image-preview"
+                        onclick="openLightbox('assets/media/image72.png', 'Escenario de Posibles Candidatos')">
+                    <div class="diagram-zoom-hint">🔍 Haz clic en el cuadro para ampliar en alta resolución</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 23: ORGANIGRAMA DE CAMPAÑA
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-23" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 06 · Estructura Operativa</span>
+                        <h2 class="slide-title">Organigrama de la Campaña CCAO</h2>
+                        <p class="slide-subtitle">Comités de trabajo, coordinación territorial, electoral y de
+                            comunicaciones</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+                <div class="diagram-stage-container">
+                    <img src="assets/media/image73.png" alt="Organigrama CCAO" class="diagram-image-preview"
+                        onclick="openLightbox('assets/media/image73.png', 'Organigrama de Campaña CCAO')">
+                    <div class="diagram-zoom-hint">🔍 Haz clic en el diagrama para ver el organigrama ampliado</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 24: ESTRATEGIAS (LOS 4 CORAZONES)
+        =========================================== -->
+        <article class="slide-stage-card" id="slide-24" style="display: none;">
+            <div class="slide-inner">
+                <div class="slide-header">
+                    <div class="slide-title-group">
+                        <span class="slide-tag">Capítulo 06 · Los 4 Pilares de Campaña</span>
+                        <h2 class="slide-title">Estrategias CCAO: El Poder de un Solo Corazón</h2>
+                        <p class="slide-subtitle">Los cuatro ejes de movilización social y comunitaria por Ortega</p>
+                    </div>
+                    <div class="slide-brand-watermark">
+                        <img src="assets/media/image2.png" alt="CCAO">
+                    </div>
+                </div>
+
+                <div class="four-hearts-grid">
+                    <div class="heart-pillar-card">
+                        <div class="heart-icon-wrapper">
+                            <img src="assets/media/image74.png" alt="Icono Territorio">
+                        </div>
+                        <h4 class="heart-pillar-title">Con el Corazón en el Territorio</h4>
+                        <p class="heart-pillar-desc">Campaña de cercanía y escucha permanente en cada vereda, callejón y
+                            barrio de Ortega.</p>
+                    </div>
+                    <div class="heart-pillar-card">
+                        <div class="heart-icon-wrapper">
+                            <img src="assets/media/image76.png" alt="Icono Abriendo Corazones">
+                        </div>
+                        <h4 class="heart-pillar-title">Abriendo Corazones</h4>
+                        <p class="heart-pillar-desc">Propuesta de diálogo ciudadano sin confrontación política, sumando
+                            a todos los sectores.</p>
+                    </div>
+                    <div class="heart-pillar-card">
+                        <div class="heart-icon-wrapper">
+                            <img src="assets/media/image74.png" alt="Icono Solidario">
+                        </div>
+                        <h4 class="heart-pillar-title">Corazón Solidario</h4>
+                        <p class="heart-pillar-desc">Compromiso irrestricto con la mujer cabeza de hogar, los adultos
+                            mayores y la niñez orteguna.</p>
+                    </div>
+                    <div class="heart-pillar-card">
+                        <div class="heart-icon-wrapper">
+                            <img src="assets/media/image76.png" alt="Icono Un Solo Corazón">
+                        </div>
+                        <h4 class="heart-pillar-title">Un Solo Corazón</h4>
+                        <p class="heart-pillar-desc">Unidad municipal entre lo rural y lo urbano para construir el
+                            futuro que Ortega se merece.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ==========================================
+             SLIDE 25: CIERRE / GRACIAS
+        =========================================== -->
+        <article class="slide-stage-card theme-slide-magenta" id="slide-25" style="display: none;">
+            <div class="slide-inner">
+                <div class="closing-stage">
+                    <div class="closing-logos">
+                        <img class="closing-logo-bird" src="assets/media/image78.png" alt="Colibrí CCAO">
+                        <img class="closing-logo-main" src="assets/media/image4.png" alt="CCAO Logo">
+                    </div>
+                    <div class="closing-thanks-row">
+                        <img class="closing-portrait" src="assets/media/image1.png" alt="Johanna Carrillo">
+                        <div class="closing-thanks-text">
+                            <h2 class="closing-thanks-title">¡GRACIAS!</h2>
+                            <h3 class="closing-slogan">Construyendo con Amor por Ortega</h3>
+                        </div>
+                    </div>
+                    <p class="closing-desc">
+                        <strong>Johanna Lizeth Carrillo Monroy</strong> · Una alternativa diferencial para transformar a
+                        Ortega con liderazgo, honestidad, carácter y amor por el territorio.
+                    </p>
+                    <div style="display: flex; gap: 16px;">
+                        <button class="btn-primary-action" onclick="goToSlide(1)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Volver al Inicio
+                        </button>
+                        <button class="btn-secondary-action" onclick="toggleOverview()">
+                            Ver Índice General
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- BOTTOM CONTROL DOCK & SENSOR -->
+    <div class="bottom-dock-sensor" id="bottomDockSensor" aria-hidden="true"></div>
+    <nav class="bottom-control-dock" id="bottomControlDock">
+        <button class="dock-btn" id="prevSlideBtn" onclick="prevSlide()"
+            title="Diapositiva anterior (Flecha Izquierda)">
+            ◀
+        </button>
+        <span class="dock-separator"></span>
+        <button class="dock-btn" onclick="toggleOverview()" title="Abrir índice (O)">
+            ☰
+        </button>
+        <button class="dock-btn" onclick="toggleFullscreen()" title="Pantalla completa (F)">
+            ⛶
+        </button>
+        <span class="dock-separator"></span>
+        <button class="dock-btn" id="nextSlideBtn" onclick="nextSlide()"
+            title="Siguiente diapositiva (Flecha Derecha o Espacio)">
+            ▶
+        </button>
+    </nav>
+
+    <!-- OVERVIEW MODAL BACKDROP -->
+    <div class="overview-modal-backdrop" id="overviewModal">
+        <div class="overview-header-bar">
+            <div>
+                <h3 style="font-size: 1.4rem; font-weight: 800;">Índice General de Diapositivas</h3>
+                <p style="font-size: 0.85rem; color: var(--accent);">Selecciona cualquier diapositiva para navegar
+                    directamente (o presiona ESC para cerrar)</p>
+            </div>
+            <button class="lightbox-close-btn" onclick="toggleOverview(false)">✕</button>
+        </div>
+        <div class="overview-grid-container" id="overviewGrid">
+            <!-- Dynamic cards generated by app.js -->
+        </div>
+    </div>
+
+    <!-- ADVANCED DEEP ZOOM LIGHTBOX MODAL -->
+    <div class="lightbox-backdrop" id="lightboxModal">
+        <div class="lightbox-top-toolbar">
+            <div class="lightbox-title-text">
+                <span style="color: var(--accent);">🔍</span>
+                <span id="lightboxTitleText">Visualizador de Diagramas en Alta Resolución</span>
+            </div>
+            <div class="lightbox-controls-group">
+                <button class="lightbox-btn" onclick="zoomOut()" title="Reducir Zoom (-)">➖</button>
+                <div class="lightbox-zoom-badge" id="lightboxZoomBadge">100%</div>
+                <button class="lightbox-btn" onclick="zoomIn()" title="Aumentar Zoom (+)">➕</button>
+                <button class="lightbox-btn" onclick="resetZoom()" title="Restablecer (100%)">Restablecer</button>
+                <button class="lightbox-btn" onclick="toggleFullscreen()" title="Pantalla Completa">⛶</button>
+                <button class="lightbox-btn close" onclick="closeLightbox()" title="Cerrar (Esc)">✕</button>
+            </div>
+        </div>
+        <div class="lightbox-viewport" id="lightboxViewport">
+            <div class="lightbox-img-wrapper" id="lightboxImgWrapper">
+                <img src="" alt="" class="lightbox-img-full" id="lightboxImg">
+            </div>
+            <div class="lightbox-helper-hint">
+                💡 Rueda del ratón o botones para Zoom (+ / -). Arrastra para explorar la imagen ampliada. Doble clic
+                para 2x.
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
