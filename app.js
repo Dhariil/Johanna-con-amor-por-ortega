@@ -2,7 +2,7 @@
 // CCAO CAMPAÑA JOHANNA CARRILLO - INTERACTIVE APP ENGINE
 // ==========================================================
 
-const TOTAL_SLIDES = 25;
+const TOTAL_SLIDES = 26;
 let currentSlide = 1;
 let overviewOpen = false;
 let lastShownSlide = null;
@@ -14,7 +14,7 @@ const slideCategories = [
     { name: 'Histórico Electoral', range: [8, 13] },
     { name: 'Alianzas & Encuesta', range: [14, 18] },
     { name: 'Diagnóstico & Movimientos', range: [19, 21] },
-    { name: 'Estructura & Estrategia', range: [22, 25] }
+    { name: 'Estructura & Estrategia', range: [22, 26] }
 ];
 
 // Initialize on DOM load

@@ -3263,7 +3263,7 @@ body.fullscreen-mode .slide-brand-watermark img { height: 72px !important; }
 
 /* --- Slide 1: portada centrada y logo protagonista --- */
 #slide-1 .slide-inner,
-#slide-25 .slide-inner {
+#slide-26 .slide-inner {
     justify-content: center !important;
     align-items: center;
 }
@@ -3893,3 +3893,337 @@ body.fullscreen-mode #slide-3 .leader-duo-img {
 #slide-15 .diagram-stage-container { padding: 1vh 12px; min-height: 0; flex: 1 1 0; }
 #slide-15 .diagram-image-preview { max-height: 24vh; width: auto; }
 #slide-15 .diagram-zoom-hint { margin-top: 0.6vh; font-size: clamp(0.65rem, 1.4vh, 0.8rem); }
+
+/* ============================================================
+   SLIDE 12: CONCEJO Y ASAMBLEA 2023 (GRUPOS SEPARADOS)
+============================================================ */
+#slide-12 .candidates-grid-concejo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 1.6vh;
+}
+#slide-12 .candidates-grid-asamblea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+#slide-12 .candidate-card {
+    padding: clamp(8px, 1.1vh, 14px) 12px;
+}
+#slide-12 .candidate-photo {
+    width: clamp(38px, 5vh, 48px);
+    height: clamp(38px, 5vh, 48px);
+}
+#slide-12 .candidate-name-txt {
+    font-size: clamp(0.74rem, 1.6vh, 0.88rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#slide-12 .candidate-party-txt {
+    font-size: clamp(0.66rem, 1.3vh, 0.76rem);
+}
+#slide-12 .candidate-stats-row {
+    font-size: clamp(0.72rem, 1.5vh, 0.82rem);
+    margin-top: 4px;
+}
+#slide-12 .election-header-badge {
+    margin-bottom: 0.8vh;
+    padding: 0.4vh 14px;
+    font-size: clamp(0.68rem, 1.4vh, 0.8rem);
+}
+#slide-12 .alliances-grid-layout {
+    margin-bottom: 1.4vh;
+}
+@media (max-width: 1200px) {
+    #slide-12 .candidates-grid-concejo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #slide-12 .candidates-grid-asamblea {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   SLIDE 16: MATRIZ DE PROBLEMÁTICAS Y BARRAS LEGIBLES
+============================================================ */
+#slide-16 .cyber-equalizer-container {
+    padding: clamp(12px, 1.6vh, 22px) 24px;
+    margin-bottom: 1.4vh;
+}
+#slide-16 .cyber-equalizer-header {
+    margin-bottom: 1vh;
+}
+#slide-16 .cyber-bars-stack {
+    gap: clamp(8px, 1.2vh, 14px);
+}
+#slide-16 .cyber-bar-item {
+    display: grid;
+    grid-template-columns: clamp(230px, 24vw, 320px) 1fr 90px;
+    align-items: center;
+    gap: 18px;
+}
+#slide-16 .cyber-bar-name {
+    font-size: clamp(0.78rem, 1.7vh, 0.95rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    white-space: normal;
+    line-height: 1.25;
+    overflow: visible;
+    text-overflow: clip;
+}
+#slide-16 .cyber-bar-dual-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 100%;
+}
+#slide-16 .dual-track {
+    height: clamp(6px, 1.2vh, 10px);
+    background: rgba(45, 22, 75, 0.7);
+    border-radius: 5px;
+}
+#slide-16 .cyber-bar-values {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.7rem, 1.5vh, 0.82rem);
+    font-weight: 800;
+    text-align: right;
+    line-height: 1.2;
+    min-width: 85px;
+}
+#slide-16 .cyber-insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 1.2vh;
+}
+#slide-16 .cyber-insight-card {
+    padding: clamp(10px, 1.3vh, 16px) 14px;
+}
+#slide-16 .cyber-insight-tag {
+    font-size: clamp(0.6rem, 1.3vh, 0.72rem);
+    margin-bottom: 0.3vh;
+}
+#slide-16 .cyber-insight-title {
+    font-size: clamp(0.78rem, 1.8vh, 0.95rem);
+    margin-bottom: 0.4vh;
+}
+#slide-16 .cyber-insight-desc {
+    font-size: clamp(0.68rem, 1.5vh, 0.82rem);
+    line-height: 1.35;
+}
+
+/* ============================================================
+   SLIDE 25: PROYECCIÓN ELECTORAL Y METAS TERRITORIALES
+============================================================ */
+#slide-25 .projection-kpis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 1.4vh;
+}
+#slide-25 .projection-kpi-card {
+    background: rgba(24, 13, 44, 0.75);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: var(--radius-md);
+    padding: clamp(10px, 1.3vh, 18px) 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+#slide-25 .projection-kpi-card.target {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, rgba(255, 42, 133, 0.16) 0%, rgba(35, 15, 60, 0.85) 100%);
+    box-shadow: 0 0 20px rgba(255, 42, 133, 0.25);
+}
+#slide-25 .projection-kpi-card.ratio {
+    border-color: var(--cyan);
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.12) 0%, rgba(35, 15, 60, 0.85) 100%);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+#slide-25 .projection-kpi-label {
+    font-size: clamp(0.68rem, 1.4vh, 0.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3vh;
+}
+#slide-25 .projection-kpi-card.target .projection-kpi-label {
+    color: var(--accent-light);
+}
+#slide-25 .projection-kpi-card.ratio .projection-kpi-label {
+    color: var(--cyan);
+}
+#slide-25 .projection-kpi-val {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3.6vh, 2.3rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.1;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+#slide-25 .projection-kpi-val .unit {
+    font-size: clamp(0.8rem, 1.6vh, 1rem);
+    font-weight: 700;
+    color: var(--text-muted);
+}
+#slide-25 .projection-kpi-sub {
+    font-size: clamp(0.66rem, 1.3vh, 0.78rem);
+    color: #d1c4e9;
+    margin-top: 0.2vh;
+}
+
+#slide-25 .projection-main-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.95fr;
+    gap: 20px;
+    min-height: 0;
+    flex: 1;
+}
+#slide-25 .projection-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+#slide-25 .projection-scroll-box {
+    max-height: clamp(230px, 42vh, 420px);
+    overflow-y: auto;
+    border: 1px solid rgba(168, 85, 247, 0.28);
+    border-radius: var(--radius-md);
+    background: rgba(18, 10, 36, 0.8);
+}
+#slide-25 .projection-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(0.72rem, 1.55vh, 0.85rem);
+}
+#slide-25 .projection-table th {
+    position: sticky;
+    top: 0;
+    background: #190e2d;
+    z-index: 2;
+    padding: 8px 12px;
+    color: var(--cyan);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(0.68rem, 1.4vh, 0.78rem);
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(0, 240, 255, 0.35);
+}
+#slide-25 .projection-table td {
+    padding: 5px 12px;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+    color: #e2d9f3;
+}
+#slide-25 .projection-table tbody tr:hover td {
+    background: rgba(255, 42, 133, 0.12);
+}
+#slide-25 .highlight-val {
+    color: var(--accent-light);
+    font-weight: 800;
+}
+#slide-25 .projection-table tfoot td {
+    position: sticky;
+    bottom: 0;
+    background: #25123d;
+    font-weight: 900;
+    padding: 8px 12px;
+    border-top: 2px solid var(--accent);
+    color: #FFFFFF;
+    z-index: 2;
+}
+#slide-25 .highlight-target {
+    color: var(--cyan);
+    font-size: 1.05em;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+#slide-25 .projection-strategy-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: flex-start;
+}
+#slide-25 .strategy-summary-card {
+    background: rgba(24, 13, 44, 0.7);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: var(--radius-md);
+    padding: clamp(12px, 1.4vh, 18px) 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+#slide-25 .strategy-card-title {
+    font-size: clamp(0.82rem, 1.8vh, 1rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+    padding-bottom: 0.6vh;
+}
+#slide-25 .strategy-points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+#slide-25 .strategy-point-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+#slide-25 .point-badge {
+    background: rgba(168, 85, 247, 0.25);
+    border: 1px solid var(--primary-light);
+    color: var(--cyan);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+#slide-25 .point-desc {
+    font-size: clamp(0.72rem, 1.55vh, 0.85rem);
+    color: #e2d9f3;
+    line-height: 1.35;
+}
+#slide-25 .strategic-alert-box {
+    background: linear-gradient(135deg, rgba(255, 42, 133, 0.16) 0%, rgba(20, 10, 36, 0.9) 100%);
+    border: 1.5px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: clamp(12px, 1.5vh, 20px) 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    box-shadow: 0 0 25px rgba(255, 42, 133, 0.22);
+}
+#slide-25 .strategic-alert-box .alert-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+#slide-25 .strategic-alert-box .alert-title {
+    font-size: clamp(0.72rem, 1.5vh, 0.82rem);
+    font-weight: 900;
+    color: var(--accent-light);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 0.4vh;
+}
+#slide-25 .strategic-alert-box .alert-text {
+    font-size: clamp(0.74rem, 1.6vh, 0.88rem);
+    color: #FFFFFF;
+    line-height: 1.45;
+    font-weight: 500;
+    margin: 0;
+}
+@media (max-width: 1024px) {
+    #slide-25 .projection-main-layout {
+        grid-template-columns: 1fr;
+    }
+}
